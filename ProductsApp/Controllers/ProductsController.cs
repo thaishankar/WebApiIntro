@@ -21,7 +21,7 @@ namespace ProductStore.Controllers
         }
 
         [HttpGet]
-        [Route("id/{id:int}")]
+        [Route("id/{id:int}", Name = "GetProductById")]
         public Product GetProduct(int id)
         {
             Product item = repository.Get(id);
@@ -33,7 +33,7 @@ namespace ProductStore.Controllers
         }
 
         [HttpGet]
-        [Route("category/{category}")]
+        [Route("category/{category}", Name = "GetProductByCategory")]
         public IEnumerable<Product> GetProductsByCategory(string category)
         {
             if (String.IsNullOrEmpty(category))
@@ -52,7 +52,7 @@ namespace ProductStore.Controllers
             item = repository.Add(item);
             var response = Request.CreateResponse<Product>(HttpStatusCode.Created, item);
 
-            string uri = Url.Link("product", new { id = item.Id });
+            string uri = Url.Link("GetProductById", new { id = item.Id });
             response.Headers.Location = new Uri(uri);
             return response;
         }

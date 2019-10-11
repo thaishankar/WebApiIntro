@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductAppClient", "Product
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsApp", "ProductsApp\ProductsApp.csproj", "{2B268702-FC82-4B55-8168-D0B4C7B67264}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsAppSelfHost", "ProductsAppSelfHost\ProductsAppSelfHost.csproj", "{87FD3A89-2475-4595-A9C5-7A029BE8936D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2B268702-FC82-4B55-8168-D0B4C7B67264}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B268702-FC82-4B55-8168-D0B4C7B67264}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B268702-FC82-4B55-8168-D0B4C7B67264}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87FD3A89-2475-4595-A9C5-7A029BE8936D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87FD3A89-2475-4595-A9C5-7A029BE8936D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87FD3A89-2475-4595-A9C5-7A029BE8936D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87FD3A89-2475-4595-A9C5-7A029BE8936D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

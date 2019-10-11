@@ -20,6 +20,8 @@ namespace HttpClientSample
 
     class Program
     {
+        static int REMOTE_PORT = 3914;
+
         #region snippet_HttpClient
         static HttpClient client = new HttpClient();
         #endregion
@@ -88,7 +90,7 @@ namespace HttpClientSample
         {
             string ipAddress;
 
-            if (args.Length > 1)
+            if (args.Length >= 1)
             {
                 ipAddress = args[0];
             }
@@ -100,7 +102,7 @@ namespace HttpClientSample
             Console.WriteLine("IpAddress = {0}", ipAddress);
 
             // Update port # in the following line.
-            client.BaseAddress = new Uri(string.Format("http://{0}:3912/", ipAddress));
+            client.BaseAddress = new Uri(string.Format("http://{0}:{1}/", ipAddress, REMOTE_PORT));
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
